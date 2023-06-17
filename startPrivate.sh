@@ -8,8 +8,8 @@ kubectl apply -f twiddit-volumes/twiddit-volumes.yaml
 kubectl apply -f twiddit-ldap/twiddit-ldap-service.yaml
 kubectl apply -f twiddit-ldap/twiddit-ldap-deployment.yaml
 
-# kubectl apply -f twiddit-ldap/phpldapadmin-service.yaml
-# kubectl apply -f twiddit-ldap/phpldapadmin-deployment.yaml
+kubectl apply -f twiddit-ldap/phpldapadmin-service.yaml
+kubectl apply -f twiddit-ldap/phpldapadmin-deployment.yaml
 
 # Iniciar RabbitMQ 
 kubectl apply -f twiddit-mq/rabbitmq-service.yaml
