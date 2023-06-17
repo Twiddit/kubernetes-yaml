@@ -1,5 +1,5 @@
 # Inicio Cluster Privado Twiddit
-
+echo "[X] Iniciando Cluster Privado"
 
 # Iniciar los volumenes 
 kubectl apply -f kubernetes-yaml/twiddit-volumes/twiddit-volumes.yaml
