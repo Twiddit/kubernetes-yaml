@@ -70,6 +70,8 @@ spec:
               name: twiddit-ldap-claim1
             - mountPath: /container/service/slapd/assets/certs/
               name: twiddit-ldap-claim2
+            - mountPath: ./bootstrap.ldif:/container/service/slapd/assets/config/bootstrap/ldif/50-bootstrap.ldif
+              name: twiddit-ldap-claim3
       hostname: twiddit-unal-edu-co
       restartPolicy: Always
       volumes:

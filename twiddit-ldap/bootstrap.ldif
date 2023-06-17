@@ -1,0 +1,14 @@
+dn: ou=users,dc=twiddit,dc=unal,dc=edu,dc=co
+changetype: add
+objectclass: organizationalUnit
+ou: users
+
+dn: cn=joviedog,ou=users,dc=twiddit,dc=unal,dc=edu,dc=co
+changetype: add
+objectclass: inetOrgPerson
+cn: joviedog
+givenname: Juan Esteban Oviedo Garcia
+sn: twiddit
+displayname: joviedog
+mail: joviedog@gmail.com
+userpassword: joviedog_pass
