@@ -28,7 +28,7 @@ spec:
         - name: PHPLDAPADMIN_HTTPS
           value: "false"
         - name: PHPLDAPADMIN_LDAP_HOSTS
-          value: cyberplace-ldap
+          value: twiddit-ldap
         image: osixia/phpldapadmin:latest
         imagePullPolicy: ""
         name: ldap-client
