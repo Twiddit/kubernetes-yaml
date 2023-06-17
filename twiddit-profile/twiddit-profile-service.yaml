@@ -23,7 +23,7 @@ spec:
               value: twiddit
             - name: DB_NAME
               value: users
-          image: ccordero17/twiddit-profile-ms
+          image: ccordero17/twiddit-profile-ms:v2
           ports:
             - containerPort: 7777
 ---
