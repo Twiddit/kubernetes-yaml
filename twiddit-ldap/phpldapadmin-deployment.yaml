@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: phpldapadmin
+  name: phpldapadmin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: phpldapadmin
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: phpldapadmin
+    spec:
+      containers:
+      - env:
+        - name: PHPLDAPADMIN_HTTPS
+          value: "false"
+        - name: PHPLDAPADMIN_LDAP_HOSTS
+          value: cyberplace-ldap
+        image: osixia/phpldapadmin:latest
+        imagePullPolicy: ""
+        name: ldap-client
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}
