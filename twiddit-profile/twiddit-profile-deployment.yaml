@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: twiddit-profile
+spec:
+  selector:
+    matchLabels:
+      app: twiddit-profile
+  replicas: 1
+  template:
+    metadata:
+      labels: 
+        app: twiddit-profile
+    spec:
+      containers:
+        - name: twiddit-profile
+          env:
+            - name: DB_HOST
+              value: 34.73.157.104
+            - name: DB_USER
+              value: ccordero
+            - name: DB_PASSWORD
+              value: twiddit
+            - name: DB_NAME
+              value: users
+          image: ccordero17/twiddit_profile_ms
+          ports:
+            - containerPort: 7777
