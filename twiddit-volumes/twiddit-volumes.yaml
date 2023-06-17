@@ -45,7 +45,7 @@ metadata:
   name: twiddit-ldap-claim3
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 100Mi
