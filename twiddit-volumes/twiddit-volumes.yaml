@@ -42,9 +42,6 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim 
 metadata:
-  creationTimestamp: null 
-  labels:
-    io.kompose.service: twiddit-ldap-claim3
   name: twiddit-ldap-claim3
 spec:
   accessModes:
