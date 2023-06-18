@@ -23,21 +23,6 @@ spec:
               value: twiddit
             - name: DB_NAME
               value: users
-          image: ccordero17/twiddit-profile-ms:v2
+          image: ccordero17/twiddit_profile_ms
           ports:
             - containerPort: 7777
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: twiddit-profile
-spec:
-  selector:
-    app: twiddit-profile
-  ports:
-  - protocol: TCP
-    port: 7777
-    targetPort: 7777
-  type: LoadBalancer
-status:
-  loadBalancer: {}

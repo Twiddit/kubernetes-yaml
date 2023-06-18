@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: twiddit-social
+spec:
+  selector:
+    matchLabels:
+      app: twiddit-social
+  replicas: 1
+  template:
+    metadata:
+      labels: 
+        app: twiddit-social
+    spec:
+      containers:
+        - name: twiddit-social
+          env:
+            - name: DB_HOST
+              value: 34.73.157.104
+            - name: DB_USER
+              value: ccordero
+            - name: DB_PASSWORD
+              value: twiddit
+            - name: DB_NAME
+              value: social
+          image: ccordero17/twiddit-social-ms:v1
+          ports:
+            - containerPort: 4000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: twiddit-social
+spec:
+  selector:
+    app: twiddit-social
+  ports:
+  - protocol: TCP
+    port: 4000
+    targetPort: 4000
+  type: LoadBalancer
+status:
+  loadBalancer: {}
