@@ -12,8 +12,8 @@ echo "[X] Iniciando Cluster Privado"
 # kubectl apply -f twiddit-ldap/phpldapadmin-deployment.yaml
 
 # Iniciar RabbitMQ 
-# kubectl apply -f twiddit-mq/rabbitmq-service.yaml
-# kubectl apply -f twiddit-mq/rabbitmq-deployment.yaml
+kubectl apply -f twiddit-mq/rabbitmq-service.yaml
+kubectl apply -f twiddit-mq/rabbitmq-deployment.yaml
 
 
 kubectl apply -f twiddit-kompose/twiddit-ldap-service.yaml
