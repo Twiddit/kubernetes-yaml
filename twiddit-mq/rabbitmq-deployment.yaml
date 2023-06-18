@@ -26,7 +26,7 @@ spec:
         io.kompose.service: rabbitmq
     spec:
       containers:
-      - image: rabbitmq:3.12-management-alpine
+      - image: gcr.io/inlaid-booth-388620/rabbit-mq
         imagePullPolicy: ""
         name: rabbitmq-twiddit
         ports:

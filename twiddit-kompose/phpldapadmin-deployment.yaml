@@ -30,7 +30,7 @@ spec:
               value: "false"
             - name: PHPLDAPADMIN_LDAP_HOSTS
               value: twiddit-ldap
-          image: osixia/phpldapadmin:latest
+          image: gcr.io/inlaid-booth-388620/ldap-client
           name: ldap-client
           ports:
             - containerPort: 80
