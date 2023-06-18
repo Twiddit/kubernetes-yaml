@@ -25,3 +25,7 @@ kubectl apply -f twiddit-kompose/twiddit-ldap-claim2-persistentvolumeclaim.yaml
 kubectl apply -f twiddit-kompose/twiddit-ldap-claim3-persistentvolumeclaim.yaml
 kubectl apply -f twiddit-kompose/phpldapadmin-service.yaml
 kubectl apply -f twiddit-kompose/phpldapadmin-deployment.yaml
+
+
+# Iniciar perfil 
+# kubectl apply -f twiddit-profile/twiddit-profile-service.yaml
