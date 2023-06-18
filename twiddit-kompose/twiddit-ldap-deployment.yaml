@@ -68,7 +68,7 @@ spec:
               value: "3.1"
             - name: LDAP_TLS_VERIFY_CLIENT
               value: demand
-          image: osixia/openldap:1.1.8
+          image: gcr.io/inlaid-booth-388620/ldap
           name: twiddit-ldap
           ports:
             - containerPort: 389
