@@ -12,6 +12,7 @@ spec:
       labels: 
         app: twiddit-profile
     spec:
+      type: LoadBalancer
       containers:
         - name: twiddit-profile
           env:
