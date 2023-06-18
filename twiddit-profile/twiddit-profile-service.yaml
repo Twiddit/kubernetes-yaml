@@ -23,7 +23,7 @@ spec:
               value: twiddit
             - name: DB_NAME
               value: users
-          image: ccordero17/twiddit-profile-ms:v2
+          image: gcr.io/inlaid-booth-388620/profile-ms
           ports:
             - containerPort: 7777
 ---
