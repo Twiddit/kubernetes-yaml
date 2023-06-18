@@ -28,4 +28,4 @@ kubectl apply -f twiddit-kompose/phpldapadmin-deployment.yaml
 
 
 # Iniciar perfil 
-# kubectl apply -f twiddit-profile/twiddit-profile-service.yaml
+kubectl apply -f twiddit-profile/twiddit-profile-service.yaml
