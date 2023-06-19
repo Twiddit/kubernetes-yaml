@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: twiddits-ms
-          image: nrinconv/twiddits-ms
+          image: gcr.io/inlaid-booth-388620/twiddits-ms
           ports:
             - containerPort: 8080
 ---
