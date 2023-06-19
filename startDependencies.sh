@@ -1,10 +1,4 @@
-# Inicio Cluster Privado Twiddit
-echo "[X] Iniciando Cluster Privado"
-
-# Iniciar RabbitMQ 
-#kubectl apply -f twiddit-mq/rabbitmq-service.yaml
-#kubectl apply -f twiddit-mq/rabbitmq-deployment.yaml
-
+echo "[X] Iniciando dependencias (LDAP, LDAP-Client, RabbitMQ)"
 
 # Iniciar LDAP 
 kubectl apply -f twiddit-kompose/twiddit-ldap-service.yaml
@@ -19,6 +13,6 @@ kubectl apply -f twiddit-kompose/twiddit-ldap-claim3-persistentvolumeclaim.yaml
 kubectl apply -f twiddit-kompose/phpldapadmin-service.yaml
 kubectl apply -f twiddit-kompose/phpldapadmin-deployment.yaml
 
-
-# Iniciar perfil 
-# kubectl apply -f twiddit-profile/twiddit-profile-service.yaml
+# Iniciar RabbitMQ 
+#kubectl apply -f twiddit-mq/rabbitmq-service.yaml
+#kubectl apply -f twiddit-mq/rabbitmq-deployment.yaml
