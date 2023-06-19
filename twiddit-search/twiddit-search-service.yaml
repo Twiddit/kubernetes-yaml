@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: twiddit-search-service
-          image: xxxxx/twiddit-search-service:v1
+          image: alerodriguezmar/search-engine-service:v1
           ports:
             - containerPort: 22100
 ---
