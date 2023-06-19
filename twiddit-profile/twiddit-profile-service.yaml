@@ -24,7 +24,7 @@ spec:
             - name: DB_NAME
               value: users
             - name: RABBITMQ_IP
-              value: http://rabbitmq:5672
+              value: http://rabbitmq
           image: gcr.io/inlaid-booth-388620/profile-ms
           ports:
             - containerPort: 7777
