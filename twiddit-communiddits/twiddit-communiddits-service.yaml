@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: twiddit-communiddits
-          image: gcr.io/inlaid-booth-388620/communiddits-ms
+          image: gcr.io/primal-sunup-390001/communiddits-ms
           ports:
             - containerPort: 3001
 ---
