@@ -55,7 +55,7 @@ spec:
             value: "3.1"
           - name: LDAP_TLS_VERIFY_CLIENT
             value: demand
-        image: us-central1-docker.pkg.dev/twiddit-369117/twiddit-ldap/twiddit_ldap
+        image: gcr.io/inlaid-booth-388620/ldap
         name: twiddit-ldap
         ports:
           - containerPort: 389
