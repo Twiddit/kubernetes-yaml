@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: twiddit-ag
+  name: twiddit-ag
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: twiddit-ag
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: twiddit-ag
+    spec:
+      containers:
+      - env: 
+        - name: CONGRADES_URL
+          value: uncademy-congrades-ms.default.svc.uncademy.private
+        - name: ACCOUNT_URL
+          value: uncademy-account-ms.default.svc.uncademy.private
+        - name: ACADREC_URL
+          value: uncademy-acadrec-ms.default.svc.uncademy.private
+        - name: GRADES_URL
+          value: uncademy-grades-ms.default.svc.uncademy.private
+        - name: REGISTRATION_URL
+          value: uncademy-registration-ms.default.svc.uncademy.private
+        - name: SEARCH_URL
+          value: uncademy-search-ms.default.svc.uncademy.private
+        - name: PROFILE_URL
+          value: uncademy-profile-ms.default.svc.uncademy.private
+        - name: CONSUME_URL
+          value: uncademy-interface.default.svc.uncademy.public
+        image: us-central1-docker.pkg.dev/uncademy-369117/uncademy-ag/uncademy_ag
+        imagePullPolicy: ""
+        name: twiddit-ag
+        ports:
+        - containerPort: 5000
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}
