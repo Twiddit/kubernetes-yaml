@@ -1,11 +1,12 @@
-#ldap 
+# ldap
 apiVersion: v1
-kind: PersistentVolumeClaim 
+kind: PersistentVolumeClaim
 metadata:
   name: twiddit-ldap-claim0
 spec:
+  storageClassName: standard-rwo
   accessModes:
-    - ReadOnlyMany 
+    - ReadWriteOnce
   resources:
     requests:
       storage: 100Mi
@@ -13,12 +14,28 @@ spec:
 ---
 
 apiVersion: v1
-kind: PersistentVolumeClaim 
+kind: PersistentVolumeClaim
 metadata:
   name: twiddit-ldap-claim1
 spec:
+  storageClassName: standard-rwo
   accessModes:
-    - ReadOnlyMany 
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: twiddit-ldap-claim2
+spec:
+  storageClassName: standard-rwo
+  accessModes:
+    - ReadWriteOnce
   resources:
     requests:
       storage: 100Mi
@@ -26,58 +43,19 @@ spec:
 ---
 
 apiVersion: v1
-kind: PersistentVolumeClaim 
+kind: PersistentVolumeClaim
 metadata:
-  name: twiddit-ldap-claim2
-spec:
-  accessModes:
-    - ReadOnlyMany 
-  resources:
-    requests:
-      storage: 100Mi
-
-
---- 
-
-apiVersion: v1
-kind: PersistentVolumeClaim 
-metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: twiddit-ldap-claim3
   name: twiddit-ldap-claim3
 spec:
+  storageClassName: standard-rwo
   accessModes:
-    - ReadWriteMany
+  - ReadWriteMany
   resources:
     requests:
       storage: 100Mi
 status: {}
-
----
-
-# RabbitMQ
-apiVersion: v1
-kind: PersistentVolumeClaim 
-metadata:
-  name: rabbitmq-claim0
-spec:
-  accessModes:
-    - ReadOnlyMany 
-  resources:
-    requests:
-      storage: 100Mi
-
----
-
-# RabbitMQ
-apiVersion: v1
-kind: PersistentVolumeClaim 
-metadata:
-  name: rabbitmq-claim1
-spec:
-  accessModes:
-    - ReadOnlyMany 
-  resources:
-    requests:
-      storage: 100Mi
-
 
 

@@ -16,13 +16,15 @@ spec:
         - name: twiddit-profile
           env:
             - name: DB_HOST
-              value: 34.73.157.104
+              value: 10.66.16.3
             - name: DB_USER
-              value: ccordero
+              value: profile-ms
             - name: DB_PASSWORD
-              value: twiddit
+              value: NuevoPass
             - name: DB_NAME
               value: users
+            - name: RABBITMQ_IP
+              value: http://rabbitmq:15672
           image: gcr.io/inlaid-booth-388620/profile-ms
           ports:
             - containerPort: 7777
