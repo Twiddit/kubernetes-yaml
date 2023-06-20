@@ -29,4 +29,5 @@ spec:
   - protocol: TCP
     port: 22100
     targetPort: 22100
-status: {}
+status:
+  loadBalancer: {}
