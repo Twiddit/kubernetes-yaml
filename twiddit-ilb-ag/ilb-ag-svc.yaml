@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ilb-ag-svc
+  annotations:
+    networking.gke.io/load-balancer-type: "Internal"
+spec:
+  type: LoadBalancer
+  externalTrafficPolicy: Cluster
+  selector:
+    app: twiddit-ag
+  ports:
+  - name: tcp-port
+    protocol: TCP
+    port: 9000
+    targetPort: 9000
