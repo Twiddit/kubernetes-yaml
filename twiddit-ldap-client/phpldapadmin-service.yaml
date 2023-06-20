@@ -28,8 +28,8 @@ spec:
         - name: PHPLDAPADMIN_HTTPS
           value: "false"
         - name: PHPLDAPADMIN_LDAP_HOSTS
-          value: twiddit-ldap
-        image: osixia/phpldapadmin:latest
+          value: twiddit-ldap.default.svc.twiddit-private   
+        image: gcr.io/inlaid-booth-388620/ldap-client
         imagePullPolicy: ""
         name: ldap-client
         ports:

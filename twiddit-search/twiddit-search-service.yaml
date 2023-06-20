@@ -14,12 +14,9 @@ spec:
     spec:
       containers:
         - name: twiddit-search-service
-          image: gcr.io/inlaid-booth-388620/search-engine-ms@sha256:2900364871d4afbccda28c0189d56f3a499f7d97d2499124ec34cae6f5435e97
+          image: gcr.io/inlaid-booth-388620/search-engine-ms@sha256:9da0dcff36cf35b9ef0b16e5b31e2773541462b8110e4251553d2f3cb0c662ac
           ports:
             - containerPort: 22100
-          env:
-            - name: SPRING_DATA_MONGODB_URI
-              value: "mongodb://twiddit:12345@34.81.212.38:27017/Twiddit_twiddits_db"
 ---
 apiVersion: v1
 kind: Service
@@ -32,6 +29,4 @@ spec:
   - protocol: TCP
     port: 22100
     targetPort: 22100
-  type: LoadBalancer
-status:
-  loadBalancer: {}
+status: {}

@@ -23,6 +23,8 @@ spec:
               value: NuevoPass
             - name: DB_NAME
               value: users
+            - name: RABBITMQ_IP
+              value: http://rabbitmq:15672
           image: gcr.io/inlaid-booth-388620/profile-ms
           ports:
             - containerPort: 7777
