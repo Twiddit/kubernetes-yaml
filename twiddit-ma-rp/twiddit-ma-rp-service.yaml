@@ -6,15 +6,15 @@ metadata:
     kompose.version: 1.21.0 (992df58d8)
   creationTimestamp: null
   labels:
-    io.kompose.service: twiddit-ag
-  name: twiddit-ag
+    io.kompose.service: twiddit-ma-rp-proxy
+  name: twiddit-ma-rp-proxy
 spec:
-  # type: LoadBalancer
+  type: LoadBalancer
   ports:
-  - name: "5000"
-    port: 5000
-    targetPort: 5000
+  - name: "81"
+    port: 81
+    targetPort: 81
   selector:
-    io.kompose.service: twiddit-ag
+    io.kompose.service: twiddit-ma-rp-proxy
 status:
   loadBalancer: {}
