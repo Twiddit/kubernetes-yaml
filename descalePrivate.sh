@@ -7,3 +7,4 @@ kubectl scale deployment twiddit-social --replicas $1
 kubectl scale deployment twiddit-twiddits --replicas $1
 kubectl scale deployment twiddit-wa --replicas $1
 kubectl scale deployment twiddit-ag --replicas $1
+kubectl scale deployment twiddit-int --replicas $1
