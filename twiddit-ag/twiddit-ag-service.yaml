@@ -12,8 +12,8 @@ spec:
   type: LoadBalancer
   ports:
   - name: "5000"
-    port: 5000
-    targetPort: 85
+    port: 85
+    targetPort: 5000
   selector:
     io.kompose.service: twiddit-ag
 status:
