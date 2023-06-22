@@ -13,7 +13,7 @@ spec:
   ports:
   - name: "5000"
     port: 5000
-    targetPort: 5000
+    targetPort: 85
   selector:
     io.kompose.service: twiddit-ag
 status:
