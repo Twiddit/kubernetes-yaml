@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: twiddit-ma-rp-proxy
+  name: twiddit-ma-rp-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: twiddit-ma-rp-proxy
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: twiddit-ma-rp-proxy
+    spec:
+      containers:
+      - env:
+        - name: AG_URL
+          value: 34.95.20.255
+        - name: NODE_ROOT
+          value: /var/www/api-gateway
+        image: gcr.io/inlaid-booth-388620/twiddit-ma-rp
+        imagePullPolicy: ""
+        name: twiddit-ma-rp-proxy
+        ports: 
+        - containerPort: 81
+        resources: {}
+        command: ["/bin/sh"]
+        args: ["-c", "envsubst '$NODE_ROOT,$AG_URL' < /tmp/app.nginx > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
+      restartPolicy: Always 
