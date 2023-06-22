@@ -27,7 +27,7 @@ spec:
     app: twiddit-wa
   ports:
   - protocol: TCP
-    port: 4200
+    port: 82
     targetPort: 80
   type: LoadBalancer
 status:
