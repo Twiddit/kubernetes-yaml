@@ -9,7 +9,7 @@ metadata:
     io.kompose.service: phpldapadmin
   name: phpldapadmin
 spec:
-  type: LoadBalancer
+  # type: LoadBalancer
   ports:
   - name: "8085"
     port: 8085
