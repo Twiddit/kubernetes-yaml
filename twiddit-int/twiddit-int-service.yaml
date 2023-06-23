@@ -27,7 +27,7 @@ spec:
     app: twiddit-int
   ports:
   - protocol: TCP
-    port: 8000
+    port: 81
     targetPort: 8000
   type: LoadBalancer
 status:
