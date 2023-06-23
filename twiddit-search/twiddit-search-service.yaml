@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: twiddit-search-service
-          image: gcr.io/inlaid-booth-388620/search-engine-ms@sha256:ededc2d1963e576c418cd1d4987e4082c98daf267a40c4fee36a54b2aa042dec
+          image: gcr.io/inlaid-booth-388620/search-engine-ms@sha256:18d247dfcc68622037a5e82d52d9e96462e20224c303a2113b63ee08506d789d
           ports:
             - containerPort: 22100
 ---
